@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Photos Grid Assignment</string>
+
+    <!--List/Grid of Photos-->
+    <string name="photos_grid">Photos Grid</string>
+
+    <!--Details of Photo-->
+    <string name="photo_details">Photo Details</string>
+</resources>

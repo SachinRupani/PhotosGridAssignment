@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragment_photos_grid">
+
+    <!--Starting Fragment-->
+    <!--Photos Grid Fragment-->
+    <fragment
+        android:id="@+id/fragment_photos_grid"
+        android:name="com.obvious.photosgridassignment.ui.photosGrid.PhotosGridFragment"
+        android:label="@string/photos_grid"
+        tools:layout="@layout/fragment_photos_grid">
+
+        <!--Navigate from photo grid page to photo details-->
+        <action
+            android:id="@+id/action_photos_grid_to_photo_details"
+            app:destination="@+id/fragment_photo_details" />
+    </fragment>
+
+    <!--Photo Details Fragment-->
+    <fragment
+        android:id="@+id/fragment_photo_details"
+        android:name="com.obvious.photosgridassignment.ui.photoDetail.PhotoDetailsFragment"
+        android:label="@string/photo_details"
+        tools:layout="@layout/fragment_photo_details" />
+
+</navigation>
