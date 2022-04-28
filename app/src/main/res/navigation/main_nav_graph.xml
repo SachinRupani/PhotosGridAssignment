@@ -2,7 +2,7 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main_nav_graph"
+    android:id="@+id/navigation_main"
     app:startDestination="@id/fragment_photos_grid">
 
     <!--Starting Fragment-->
@@ -16,7 +16,7 @@
         <!--Navigate from photo grid page to photo details-->
         <action
             android:id="@+id/action_photos_grid_to_photo_details"
-            app:destination="@+id/fragment_photo_details" />
+            app:destination="@id/fragment_photo_details" />
     </fragment>
 
     <!--Photo Details Fragment-->

@@ -6,4 +6,7 @@
 
     <!--Details of Photo-->
     <string name="photo_details">Photo Details</string>
+
+    <!--Error Msg-->
+    <string name="msg_unable_to_fetch_photos">Unable to fetch photos</string>
 </resources>
