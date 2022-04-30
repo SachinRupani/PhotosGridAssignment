@@ -29,7 +29,7 @@ data class PhotoJsonModel(
         return PhotoEntity(
             title = title,
             copyright = copyright ?: "",
-            date = date ?: "1971-01-01",
+            strDate = date ?: "1971-01-01",
             explanation = explanation,
             hdImageUrl = hdImageUrl ?: thumbnailImageUrl ?: "",
             thumbnailImageUrl = thumbnailImageUrl ?: "",

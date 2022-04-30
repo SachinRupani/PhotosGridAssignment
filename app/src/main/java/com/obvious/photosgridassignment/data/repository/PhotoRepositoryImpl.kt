@@ -4,6 +4,8 @@ import android.content.Context
 import com.obvious.photosgridassignment.R
 import com.obvious.photosgridassignment.data.restApiJsonModels.PhotoJsonModel
 import com.obvious.photosgridassignment.domain.common.DataResult
+import com.obvious.photosgridassignment.domain.common.GeneralException
+import com.obvious.photosgridassignment.domain.entities.PhotoEntity
 import com.obvious.photosgridassignment.domain.repositories.PhotoRepository
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
@@ -22,7 +24,7 @@ class PhotoRepositoryImpl @Inject constructor(
     /**
      * Implementation of fetching list of photos
      */
-    override suspend fun fetchListOfPhotos(): DataResult {
+    override suspend fun fetchListOfPhotos(): DataResult<List<PhotoEntity>, GeneralException> {
         val listType = Types.newParameterizedType(List::class.java, PhotoJsonModel::class.java)
         val adapter: JsonAdapter<List<PhotoJsonModel>?> = moshi.adapter(listType)
 
@@ -37,15 +39,17 @@ class PhotoRepositoryImpl @Inject constructor(
             /**
              * Return Success Data Result with data as List of PhotoEntity
              */
-            DataResult.Success(data = listPhotos)
+            DataResult.Success(data = listPhotos ?: emptyList())
         } catch (exception: IOException) {
 
             /**
              * Return Failure with string message and exception
              */
             DataResult.Failure(
-                msg = context.getString(R.string.msg_unable_to_fetch_photos),
-                cause = exception
+                failure = GeneralException(
+                    message = context.getString(R.string.err_msg_unable_to_fetch_photos),
+                    exception = exception
+                )
             )
         }
 

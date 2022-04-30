@@ -1,10 +1,8 @@
 package com.obvious.photosgridassignment.ui
 
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import com.obvious.photosgridassignment.R
 import dagger.hilt.android.AndroidEntryPoint
@@ -26,6 +24,5 @@ class MainActivity : AppCompatActivity() {
     private fun initNavController() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment_container) as NavHostFragment?
         navController = navHostFragment?.navController
-        Log.d("NavController", "_" + navController?.toString())
     }
 }

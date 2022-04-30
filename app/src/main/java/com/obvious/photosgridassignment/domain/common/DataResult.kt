@@ -5,17 +5,16 @@ package com.obvious.photosgridassignment.domain.common
  * either for success
  * or for failure
  */
-sealed class DataResult {
+sealed class DataResult<out S, out F> {
     /**
      * Success
      * @param data generic data to be used
      */
-    data class Success<T>(val data: T) : DataResult()
+    data class Success<out S>(val data: S) : DataResult<S, Nothing>()
 
     /**
      * Failure
-     * @param msg [String] Cause of failure
-     * @param cause [Exception]
+     * @param failure Cause of failure
      */
-    data class Failure(val msg: String, val cause: Exception? = null) : DataResult()
+    data class Failure<out F>(val failure: F) : DataResult<Nothing, F>()
 }
