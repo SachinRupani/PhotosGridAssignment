@@ -14,4 +14,7 @@
     <color name="light_background">#FFFFFF</color>
     <color name="dark_background">#424250</color>
 
+    <color name="light_color_on_surface">#222222</color>
+    <color name="dark_color_on_surface">#E9E9E9</color>
+
 </resources>

@@ -31,12 +31,6 @@ class PhotosGridFragment : Fragment(R.layout.fragment_photos_grid) {
         super.onViewCreated(view, savedInstanceState)
         binding = FragmentPhotosGridBinding.bind(view)
 
-        //Recycler View Layout Manager
-        val gridLayoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL).apply {
-            gapStrategy = StaggeredGridLayoutManager.GAP_HANDLING_MOVE_ITEMS_BETWEEN_SPANS
-        }
-        binding?.rvPhotosGrid?.layoutManager = gridLayoutManager
-
         setupAdapter()
         attachObservers()
     }

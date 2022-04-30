@@ -25,14 +25,15 @@
             tools:src="@drawable/img_placeholder" />
 
 
+        <!--Card View Details Title and Date-->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardDetails1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            app:cardCornerRadius="4dp"
             app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="4dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -49,15 +50,16 @@
                     android:id="@+id/txtTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:textAppearance="?attr/textAppearanceHeadline2"
+                    android:textColor="?attr/colorOnSurface" />
 
                 <!--Date of the photo-->
                 <TextView
                     android:id="@+id/txtDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="14sp" />
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?attr/colorOnSurface" />
 
             </LinearLayout>
 
@@ -69,8 +71,8 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginTop="16dp"
-            app:cardCornerRadius="4dp"
             app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="4dp"
             app:cardUseCompatPadding="true"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -78,25 +80,26 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="12dp"
-                android:layout_height="wrap_content">
+                android:padding="12dp">
 
                 <!--Title Explanation-->
                 <TextView
                     android:id="@+id/txtExplanationTitle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp"
                     android:text="@string/explanation"
-                    android:textStyle="bold" />
+                    android:textAppearance="?attr/textAppearanceHeadline2"
+                    android:textColor="?attr/colorOnSurface" />
 
                 <!--Explanation of the photo-->
                 <TextView
                     android:id="@+id/txtExplanation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="16sp" />
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="?attr/colorOnSurface" />
 
             </LinearLayout>
 

@@ -4,10 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.18425925925925926" />
+        <entry key="app/src/main/res/font/app_font.xml" value="0.1787037037037037" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/fragment_photo_details.xml" value="0.19794871794871796" />
         <entry key="app/src/main/res/layout/fragment_photos_grid.xml" value="0.19794871794871796" />
-        <entry key="app/src/main/res/layout/pager_item_photo_detail.xml" value="0.525" />
+        <entry key="app/src/main/res/layout/pager_item_photo_detail.xml" value="0.25" />
         <entry key="app/src/main/res/layout/row_item_photo.xml" value="0.19794871794871796" />
       </map>
     </option>
