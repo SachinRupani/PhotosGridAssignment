@@ -11,12 +11,12 @@
 ## :camera_flash: Screenshots
 
 ### Light
-<img width="360" height="780" src="images/img_screenshot_dark_list.png" alt="Image" >
-<img width="360" height="780" src="images/img_screenshot_dark_details.png" alt="Image" >
-
-### Dark
 <img width="360" height="780" src="images/img_screenshot_light_list.png" alt="Image" >
 <img width="360" height="780" src="images/img_screenshot_light_details.png" alt="Image" >
+
+### Dark
+<img width="360" height="780" src="images/img_screenshot_dark_list.png" alt="Image" >
+<img width="360" height="780" src="images/img_screenshot_dark_details.png" alt="Image" >
 
 
 ## License
