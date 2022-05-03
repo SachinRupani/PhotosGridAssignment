@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Photos Grid Assignment</string>
+    <string name="app_name">NASA Pictures App</string>
 
     <!--List/Grid of Photos-->
     <string name="photos_grid">Photos Grid</string>
@@ -8,6 +8,8 @@
     <string name="photo_details">Photo Details</string>
 
     <string name="explanation">Explanation</string>
+
+    <string name="copyright">Copyright</string>
 
     <!--Error Msg-->
     <string name="err_msg_io_error">Unable to fetch JSON file</string>

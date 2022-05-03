@@ -28,7 +28,7 @@ data class PhotoJsonModel(
     fun toPhotoEntity(): PhotoEntity {
         return PhotoEntity(
             title = title,
-            copyright = copyright ?: "",
+            copyright = copyright,
             strDate = date ?: "1971-01-01",
             explanation = explanation,
             hdImageUrl = hdImageUrl ?: thumbnailImageUrl ?: "",

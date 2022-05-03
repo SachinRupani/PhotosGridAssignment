@@ -1,4 +1,4 @@
-# Photos Grid and Details
+# NASA Pictures App
 #### MVVM (Model View Viewmodel) with Hilt (Dependency Injection) and CLEAN Architecture
 #### Added unit tests for testing use cases
 #### Added one UI Test for testing navigation from list to details page

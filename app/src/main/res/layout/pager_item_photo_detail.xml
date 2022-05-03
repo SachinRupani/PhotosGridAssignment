@@ -25,7 +25,7 @@
             tools:src="@drawable/img_placeholder" />
 
 
-        <!--Card View Details Title and Date-->
+        <!--Title and Date-->
         <androidx.cardview.widget.CardView
             android:id="@+id/cardDetails1"
             android:layout_width="0dp"
@@ -58,6 +58,7 @@
                     android:id="@+id/txtDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textColor="?attr/colorOnSurface" />
 
@@ -65,8 +66,9 @@
 
         </androidx.cardview.widget.CardView>
 
+        <!--Explanation-->
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardDetails2"
+            android:id="@+id/cardDetailsExplanation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
@@ -98,11 +100,54 @@
                     android:id="@+id/txtExplanation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:textAppearance="?attr/textAppearanceBody1"
                     android:textColor="?attr/colorOnSurface" />
 
             </LinearLayout>
 
         </androidx.cardview.widget.CardView>
+
+        <!--Copyright-->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDetailsCopyright"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="?attr/colorSurface"
+            app:cardCornerRadius="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardDetailsExplanation">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!--Copyright Value of the photo-->
+                <TextView
+                    android:id="@+id/txtCopyrightTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/copyright"
+                    android:textAppearance="?attr/textAppearanceHeadline2"
+                    android:textColor="?attr/colorOnSurface" />
+
+                <!--Copyright Value of the photo-->
+                <TextView
+                    android:id="@+id/txtCopyright"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:textColor="?attr/colorOnSurface" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.core.widget.NestedScrollView>

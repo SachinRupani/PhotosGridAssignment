@@ -2,6 +2,7 @@ package com.obvious.photosgridassignment.ui.photos.photoDetail
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.view.isVisible
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.load
@@ -29,8 +30,16 @@ class PhotoDetailPagerItemAdapter(
                 //Place Date
                 binding.txtDate.text = strDate.toDisplayDate()
 
-                //Photo Explanation
+                //Place Photo Explanation
                 binding.txtExplanation.text = explanation
+
+                //Place Photo Copyright Info
+                val shouldShowCopyrightSection = copyright != null
+                binding.cardDetailsCopyright.isVisible = shouldShowCopyrightSection
+                if(shouldShowCopyrightSection) {
+                    binding.txtCopyright.text = copyright
+                }
+
 
             }
         }
