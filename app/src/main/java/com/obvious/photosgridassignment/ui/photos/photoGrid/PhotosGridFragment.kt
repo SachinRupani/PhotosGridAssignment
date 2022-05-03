@@ -6,7 +6,6 @@ import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.hilt.navigation.fragment.hiltNavGraphViewModels
 import androidx.navigation.fragment.findNavController
-import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.obvious.photosgridassignment.R
 import com.obvious.photosgridassignment.application.utils.showToast
 import com.obvious.photosgridassignment.databinding.FragmentPhotosGridBinding

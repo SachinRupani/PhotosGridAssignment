@@ -10,5 +10,7 @@
     <string name="explanation">Explanation</string>
 
     <!--Error Msg-->
-    <string name="err_msg_unable_to_fetch_photos">Unable to fetch photos</string>
+    <string name="err_msg_io_error">Unable to fetch JSON file</string>
+    <string name="err_msg_json_data_error">Unable to parse JSON</string>
+    <string name="err_msg_unknown_error">Some unwanted error occurred</string>
 </resources>

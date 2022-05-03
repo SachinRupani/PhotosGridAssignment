@@ -1,9 +1,11 @@
 package com.obvious.photosgridassignment.ui.photos
 
+import android.app.Application
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
 import androidx.lifecycle.viewModelScope
+import com.obvious.photosgridassignment.application.utils.resolveErrorMessage
 import com.obvious.photosgridassignment.domain.common.DataResult
 import com.obvious.photosgridassignment.domain.entities.PhotoEntity
 import com.obvious.photosgridassignment.domain.useCases.FetchSortedListOfPhotosUseCase
@@ -15,7 +17,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class PhotoViewModel @Inject constructor(
-    private val fetchSortedListOfPhotosUseCase: FetchSortedListOfPhotosUseCase
+    private val fetchSortedListOfPhotosUseCase: FetchSortedListOfPhotosUseCase,
+    private val application: Application
 ) : ViewModel() {
 
     //Live data holding list of photos
@@ -25,10 +28,19 @@ class PhotoViewModel @Inject constructor(
                 fetchSortedListOfPhotosUseCase.invoke()
             }
             when (dataResult) {
+                //Successfully fetched photos
                 is DataResult.Success -> {
                     emit(UiState.Success(data = dataResult.data))
                 }
-                is DataResult.Failure -> emit(UiState.Failure(failureMsg = dataResult.failure.message))
+
+                //Fetch photos failed
+                is DataResult.Failure -> emit(
+                    UiState.Failure(
+                        failureMsg = dataResult.failure.resolveErrorMessage(
+                            resources = application.resources
+                        )
+                    )
+                )
             }
         }
 

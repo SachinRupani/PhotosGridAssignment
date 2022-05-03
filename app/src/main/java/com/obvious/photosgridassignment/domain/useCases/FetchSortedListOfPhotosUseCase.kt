@@ -2,6 +2,7 @@ package com.obvious.photosgridassignment.domain.useCases
 
 import android.util.Log
 import com.obvious.photosgridassignment.application.utils.toDateOrNull
+import com.obvious.photosgridassignment.domain.common.DataError
 import com.obvious.photosgridassignment.domain.common.DataResult
 import com.obvious.photosgridassignment.domain.common.GeneralException
 import com.obvious.photosgridassignment.domain.entities.PhotoEntity
@@ -13,7 +14,7 @@ import com.obvious.photosgridassignment.domain.repositories.PhotoRepository
  * @param repository [PhotoRepository]
  */
 class FetchSortedListOfPhotosUseCase(private val repository: PhotoRepository) {
-    suspend operator fun invoke(): DataResult<List<PhotoEntity>, GeneralException> {
+    suspend operator fun invoke(): DataResult<List<PhotoEntity>, DataError> {
         return when (val dataResultPhotos = repository.fetchListOfPhotos()) {
 
             //Successfully fetched list of photos
