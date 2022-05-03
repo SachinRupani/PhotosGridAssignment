@@ -11,15 +11,17 @@
 ## :camera_flash: Screenshots
 
 ### Light
+#### Photos Grid
 <img width="360" height="780" src="images/img_screenshot_dark_list.png" alt="Image" >
-**********************
+#### Photo Details
 <img width="360" height="780" src="images/img_screenshot_dark_details.png" alt="Image" >
-**********************
 
 ### Dark
+#### Photos Grid
 <img width="360" height="780" src="images/img_screenshot_light_list.png" alt="Image" >
-**********************
+#### Photo Details
 <img width="360" height="780" src="images/img_screenshot_light_details.png" alt="Image" >
+
 
 ## License
 ```
